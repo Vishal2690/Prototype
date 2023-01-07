@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #kk {
+            width: 400px;
+            background-color: red;
+            color: azure;
+            border-radius: 10px;
+            box-shadow: 2px 4px 8px gray;
+            text-shadow: 4px 3px gray;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1 id="kk">Inheritance and Prototype</h1>
+    </center>
+    <p>Question 1 : Create 2 objects - parent and child. Attach methods to parent and use those methods in child object using parents prototype</p>
+    <h3>Ans:- </h3>
+    <pre style="color:red;">
+       const parentAt{
+        countAge:function(){
+            console.log(`${this.name1}, ${this.name2}, ${this.age}`)
+        }
+       }
+       let childAt = Attach.creat(parentAt);
+       childAt.name1='surya',
+       childAt.name2='rao';
+       childAt.countAge();
+    </pre>
+    <hr>
+    <br>
+    <p>Question 2 : Write code to explain prototype chaining</p>
+    <h3>Ans:- </h3>
+    <pre style="color:red;">
+       function myFunction(){
+        this.name = "raghav";
+       }
+       myFunction.prototype.name = "adarsh";
+       myFunction.prototype.color = "white";
+        const myFun = new myFunction();
+        console.log(myFun.name);
+        console.log(myFun.color);
+    </pre>
+    <hr>
+    <br>
+    <p>Question 3 : Add a method to calculate sum of all elements in Array in array's protype, use that method to calculate sum for multiple arrays</p>
+    <h3>Ans:- </h3>
+    <pre style="color:red;">
+      const countSum={
+        function:myfunction(arr){
+            let sum=0;
+            for(let i=0; i< arr.length; i++){
+                sum+=arr[i];
+            }
+            console.log(sum);
+        }
+      }
+      sum.function([1,2.3,4,1])
+      sum.function([12,12,12,12,12])
+    </pre>
+    <hr>
+    <br>
+    <p>Question 4 : Write a JavaScript function to retrieve all the names of object's own and inherited properties.</p>
+    <h3>Ans:- </h3>
+    <pre style="color:red;">
+     const table = {
+        name:'hanuman';
+        age:100000;
+
+     }
+     const prop = object.getOwnPropertyName(user)
+     console.log(prop)
+    </pre>
+   
+
+</body>
+
+</html>
